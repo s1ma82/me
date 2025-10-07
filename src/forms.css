@@ -1,0 +1,96 @@
+
+form {
+  @apply rounded-[20px] bg-white p-7;
+}
+
+input[type="checkbox"]{
+  @apply checkbox border-secodary border-2 rounded-[4px]
+}
+
+
+.x-form-section-title{
+  @apply px-3 text-[1.125rem] mb-4.5 w-full
+}
+
+.x-split-container{
+  @apply flex-col gap-2.5 p-3 flex-1 min-w-lg max-md:min-w-full
+}
+.x-checkbox-list{
+  @apply flex flex-col
+}
+.x-checkbox-item{
+  @apply px-3 py-2 flex gap-3 w-fit
+}
+.x-checkbox-item label {
+  @apply cursor-pointer
+}
+
+.tooltip::before{
+  @apply rounded-[12px] bg-primary-dark py-3 px-4 left-4/5
+}
+.tooltip::after{
+  @apply  left-4/5
+}
+.tooltip-center::before {
+  @apply left-1/2
+}
+.tooltip-center::after {
+  @apply left-1/2
+}
+
+.x-checkbox-item[data-disabled="true"] label {
+  @apply text-disable
+}
+.x-input{
+  @apply rounded-[8px] border-1 border-separator outline-none px-3.5 py-2 focus:outline-none focus:shadow-none hover:shadow-none disabled:text-black
+}
+.x-input[data-error="true"] {
+  @apply border-red
+}
+.x-label{
+  @apply text-tertiary-dark text-[.875em]
+}
+.x-error-label{
+  @apply label text-red-600 lowercase opacity-50 
+}
+.x-form-content{
+  @apply px-3 flex flex-col gap-8 
+}
+
+.x-form-sub-content{
+  @apply pl-11 pr-8 py-7 flex flex-col gap-2 bg-background-secondary rounded-[20px] 
+}
+
+.x-form-section{
+  @apply flex flex-col gap-2.5 p-3 items-start
+}
+.x-form-sub-section{
+  @apply flex flex-col gap-2.5 items-start
+}
+.x-textarea {
+  @apply w-full bg-white
+}
+/* .x-textarea {
+  @apply input x-input w-full
+} */
+
+.x-sup{
+  @apply text-[15px]
+}
+
+.x-title{
+  @apply text-2xl font-semibold
+}
+
+.x-form{
+  @apply border-dashed p-4 box-border ;
+}
+
+.x-form-header{
+  @apply flex justify-between px-2.5 items-center;
+}
+
+.input {
+  @apply w-full ;
+}
+s

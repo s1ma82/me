@@ -1,0 +1,90 @@
+---
+import catTui from './catTui.txt?raw'
+import Person from './Person.astro'
+import Chain from './Chain.astro'
+import WindowSidebar from './WindowSidebar.astro'
+import HddStack from './HddStack.astro'
+import Boxes from './Boxes.astro'
+import Star from './Star.astro'
+import Circle from './Circle.astro'
+
+
+const colors = [
+    'var(--color-red)', 'var(--color-green)', 'var(--color-yellow)', 
+    'var(--color-dark-blue)', 'var(--color-purple)', 'var(--color-blue)', 
+    'var(--color-gray)', 'var(--color-black)'
+]
+---
+
+<div class="py-20 w-full h-fit flex justify-center">
+    <div class="
+        terminal bg-terminal rounded-[28px] p-4 w-3/4 flex flex-col gap-3 
+        shadow-[0_0_30px_-5px_var(--color-blue),_inset_0_-5px_7px_#00000070]
+        ">
+        <div class="topline text-[20px]">
+            <span class="text-blue">~</span> <span class="text-green">skillsfetch</span>
+        </div>
+        <div class="infoblock flex">
+            <pre class="text-[5px]">
+                {catTui}
+            </pre>
+            <ul class="flex flex-col w-full text-[20px] [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:p-2.5  ">
+                <li>
+                    <Person /> 
+                    <div>
+                        <span class="text-blue">person:</span> @<span class="text-blue">s1ma82</span>
+                    </div>
+                </li>
+                <li>
+                    <Chain /> 
+                    <div>
+                        <span class="text-blue">skills:</span>
+                    </div>
+                </li>
+                <li>
+                    <ul class="ml-16 flex flex-col w-full text-[20px] [&>li]:flex [&>li]:gap-2 [&>li]:p-2.5  ">
+                        <li>
+                            <WindowSidebar /> 
+                            <div class="flex gap-3">
+                                <span class="text-blue">front:</span>
+                                <p>
+                                    JS, TS, React, Next.js, Astro, Tauri, HTML5, CSS3, Sass, Tailwind. 
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <HddStack /> 
+                            <div class="flex gap-3">
+                                <span class="text-blue">back:</span>
+                                <p>
+                                    Node.js, Bun, Fastify, Grammy.js, SQLite, MongoDB; Go, echo, JWT, Redis.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <Boxes /> 
+                            <div class="flex gap-3">
+                                <span class="text-blue">sys:</span>
+                                <p>
+                                Linux, MySQL, PostgresQL, Docker, PM2, Nginx.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <Star /> 
+                            <div class="flex gap-3">
+                                <span class="text-blue">sys:</span>
+                                <p>
+                                Git, Figma, GIMP.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <div class="flex gap-9 p-2.5 pt-6 border-t-2 border-white w-full">
+                    {colors.map(i => (<Circle fill={i}/>))}
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>

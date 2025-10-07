@@ -1,0 +1,29 @@
+{
+  "name": "s1ma82",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev --port 3000",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.4.0",
+    "@fontsource/jetbrains-mono": "^5.2.8",
+    "@fontsource/montserrat": "^5.2.8",
+    "@studio-freight/lenis": "^1.0.42",
+    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/vite": "^4.1.14",
+    "aos": "^2.3.4",
+    "astro": "^5.14.1",
+    "daisyui": "^5.1.27",
+    "motion": "^12.23.22",
+    "tailwindcss": "^4.1.14",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.7",
+    "@types/react": "^19.2.2"
+  }
+}

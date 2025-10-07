@@ -1,0 +1,60 @@
+---
+
+import Tag from '../components/tag/tag.astro'
+import Terminal from '../components/terminal/terminal.astro'
+import '../app.css'
+import FullStack from '../components/typed/title'
+import MainBanner from "../components/motion/mainBanner"
+import ComingSoon from '../components/typed/comingSoon'
+---
+
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>s1ma82</title>
+	</head>
+	<body class="bg-background p-6 overflow-x-hidden">
+		<section class="flex justify-between h-[640px] mb-16">
+			
+			<MainBanner client:idle/>
+		
+		</section>
+		<section class="relative" id="1section">
+			<Tag tag="h1" tagClass="title">
+				<h1 class="text-4xl text-center py-10 absolute top-10 left-1/2 translate-x-[-200px]"><b>Front-end</b> & <FullStack client:idle/></h1>
+				<div class="h-[150px]"></div>
+			</Tag>
+			<Tag tag="p" tagClass="about-me">
+				<p class="ml-14 text-[20px] py-2">
+					Человек-оркестр в разработке. Развиваюсь во всём, до чего дотягиваюсь, — люблю разбираться, экспериментировать и находить связи между разными областями. Хочу уметь делать всё сам, но ценю командную работу и обмен идеями. Получаю удовольствие от самого процесса обучения — от технологий и инноваций в IT до истории и культур разных стран.
+					</br></br>
+					Профессию выбрал в 14 лет, потому что мечтал познать мир и увидеть его своими глазами. Разработка для меня — способ расти, создавать и, однажды, построить что-то своё.
+				<div class="flex justify-end items-center text-[20px] gap-3">
+					<span class="opacity-70">И вообще, я просто обожаю технику.</span>
+					<img src="CpuFill.svg" alt="Процессор? Что?"/>
+				</div>
+				</p>
+			</Tag>
+		</section>
+		<section class="relative">
+			<Tag tag="div" tagClass="terminal">
+				<Terminal/>
+			</Tag>
+		</section>
+		<section class="flex justify-center">
+			<ComingSoon client:idle/>
+		</section>
+		<section class="flex justify-center p-10">
+			<a class="text-2xl underline" href="https://t.me/s1ma_tg">Телеграмм для связи</a>
+		</section>
+		
+		<div class="h-[1500px] w-full"></div>
+		<script src="../scripts/main.ts"></script>
+	</body>
+</html>

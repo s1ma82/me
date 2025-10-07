@@ -1,0 +1,147 @@
+@import '@fontsource/jetbrains-mono';
+@import "tailwindcss";
+@import "./forms.css";
+
+@plugin "daisyui" {
+  logs: false;
+  themes: light;
+}
+
+@plugin "daisyui/theme" {
+  
+}
+
+
+[data-theme="light"] .select {
+  background-image: url("../components/icons/select.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* справа и по центру */
+  padding-right: 2.5rem; /* чтобы текст не налезал на иконку */  
+}
+.select {
+  @apply w-full outline-none shadow-none hover:shadow-none border-secodary; 
+}
+
+.select:focus, .select:focus-visible{
+  @apply outline-none ring-0 border-inherit;
+}
+
+.btn{
+  @apply rounded-[10px]
+}
+.btn-ghost {
+  @apply text-primary-60 hover:bg-transparent hover:text-primary-100
+}
+.btn-primary{
+  @apply bg-primary-100 hover:bg-primary-60 text-white
+}
+.logo-light{
+  @apply shadow-[0_0_60px_1px_var(--color-light)] 
+}
+@theme inline {
+  --color-light: #FFFFFF70;
+  --color-white: #FFFFFF;
+  --color-warning: #FDE8BA;
+  --color-warning-accent: #F5A800;
+  --color-red: #B05279;
+  --color-green: #B4D273;
+  --color-yellow: #E5B567;
+  --color-blue: #61DAFB;
+  --color-dark-blue: #5C6AFF;
+  --color-purple: #B338F5;
+  --color-gray: #949698;
+
+  --color-terminal: #12161F;
+  --color-separator: #D9D9D9;
+  --color-secodary: #AFAFB5;
+  --color-primary-60: #3E36B0;
+  --color-primary-100: #252069;
+  --color-disable: #9696A2;
+  --color-placeholder: #82818E;
+  --color-primary-dark: #070707;
+  --color-tertiary-light: #9696A2;
+  --color-tertiary-dark: #82818E;
+  --color-background: #040813;
+  --color-background-secondary: #F2F3F7;
+  --color-foreground: var(--foreground);
+  --default-font-family: "JetBrains Mono";
+  --font-family-title: "Montserrat";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+label[data-star="true"]::after{
+  
+  content: "*";
+  color: var(--color-red);
+}
+a {
+  /* color: var(--color-primary-60); */
+}
+body{
+  font-family: var(--default-font-family);
+  color: var(--color-white);
+}
+html{
+  scroll-timeline: --full-page-scroll block;
+  scroll-behavior: smooth;
+}
+
+@keyframes mainImgAnim {
+  from {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-100%, 100%) scale(1);
+  }
+}
+.main-img{
+  animation-name: mainImgAnim;
+  animation-fill-mode: both;
+  /* animation-timing-function: linear; */
+  animation-timeline: scroll();
+  animation-range: 0 1000px;
+}
+
+@keyframes mainBannerAnim {
+  from {
+    opacity: 1;
+    transform: translate(0%, 0%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(100%, 110%) scale(1);
+  }
+}
+.main-banner{
+  animation-name: mainBannerAnim;
+  animation-fill-mode: both;
+  /* animation-timing-function: linear; */
+  animation-timeline: scroll();
+  animation-range: 100px;
+
+}
+
+@keyframes lets-go {
+  from {
+    transform: translateY(0%) scale(1) ;
+    opacity: .6; 
+  }
+  to {
+    transform: translateY(-300%) scale(0.5);
+    opacity: .2; 
+
+  }
+}
+.lets-go{
+  animation-name: lets-go;
+  animation-fill-mode: both;
+  /* animation-timing-function: linear; */
+  animation-timeline: scroll();
+  animation-range: 100px;
+}
