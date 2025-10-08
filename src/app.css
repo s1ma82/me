@@ -12,30 +12,6 @@
 }
 
 
-[data-theme="light"] .select {
-  background-image: url("../components/icons/select.svg");
-  background-size: 24px;
-  background-repeat: no-repeat;
-  background-position: right 8px center; /* справа и по центру */
-  padding-right: 2.5rem; /* чтобы текст не налезал на иконку */  
-}
-.select {
-  @apply w-full outline-none shadow-none hover:shadow-none border-secodary; 
-}
-
-.select:focus, .select:focus-visible{
-  @apply outline-none ring-0 border-inherit;
-}
-
-.btn{
-  @apply rounded-[10px]
-}
-.btn-ghost {
-  @apply text-primary-60 hover:bg-transparent hover:text-primary-100
-}
-.btn-primary{
-  @apply bg-primary-100 hover:bg-primary-60 text-white
-}
 .logo-light{
   @apply shadow-[0_0_60px_1px_var(--color-light)] 
 }
