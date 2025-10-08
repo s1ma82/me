@@ -51,8 +51,9 @@
   --color-dark-blue: #5C6AFF;
   --color-purple: #B338F5;
   --color-gray: #949698;
-
   --color-terminal: #12161F;
+  --color-backdrop: rgba(18, 22, 31, 0.86);
+
   --color-separator: #D9D9D9;
   --color-secodary: #AFAFB5;
   --color-primary-60: #3E36B0;
@@ -66,6 +67,7 @@
   --color-background-secondary: #F2F3F7;
   --color-foreground: var(--foreground);
   --default-font-family: "JetBrains Mono";
+  --font-inter: "Inter";
   --font-family-title: "Montserrat";
 }
 

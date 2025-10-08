@@ -5,8 +5,9 @@ export default () => {
     const typedRef = useRef(null)
     useEffect(() => {
         const typed = new Typed(typedRef.current, {
-            strings: ["..." ],
+            strings: ["..."],
             typeSpeed: 300,
+            backSpeed: 300,
             loop: true,
             cursorChar:''
         
@@ -16,9 +17,9 @@ export default () => {
         }
     }, [])
     return (
-        <h1 className="text-3xl">
+        <h1 className="text-3xl relative">
             Coming soon
-            <span  ref={typedRef}/>
+            <span className="absolute "  ref={typedRef}/>
         </h1>
     )
 }

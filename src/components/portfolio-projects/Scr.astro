@@ -1,0 +1,25 @@
+---
+import react from '../../icons/react.svg?raw'
+import nextjs from '../../icons/nextjs.svg?raw'
+import sass from '../../icons/sass.svg?raw'
+import vite from '../../icons/vite.svg?raw'
+import zustand from '../../icons/zustand.svg?raw'
+import ts from '../../icons/ts.svg?raw'
+---
+
+
+<div class="w-full h-full flex flex-col justify-center items-center py-16">
+    <div class="relative h-[500px] w-[800px] rounded-3xl overflow-hidden cursor-pointer">
+        <img src="scr.png" class="absolute h-full w-full top-0 left-0 backdrop-blur-sm "/>
+        <div class="absolute h-full w-full z-10 backdrop-blur-xs bg-backdrop flex justify-center items-center">
+            <div class="flex gap-8">
+                <Fragment set:html={react}/>
+                <Fragment set:html={nextjs}/>
+                <Fragment set:html={sass}/>
+                <Fragment set:html={vite}/>
+                <Fragment set:html={zustand}/>
+                <Fragment set:html={ts}/>
+            </div>
+        </div>
+    </div>
+</div>

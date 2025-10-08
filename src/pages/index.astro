@@ -6,6 +6,8 @@ import '../app.css'
 import FullStack from '../components/typed/title'
 import MainBanner from "../components/motion/mainBanner"
 import ComingSoon from '../components/typed/comingSoon'
+import Scr from '../components/portfolio-projects/Scr.tsx'
+
 ---
 
 <html lang="ru">
@@ -14,6 +16,7 @@ import ComingSoon from '../components/typed/comingSoon'
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -47,11 +50,22 @@ import ComingSoon from '../components/typed/comingSoon'
 				<Terminal/>
 			</Tag>
 		</section>
+		<section>
+			<Tag tag="ul" tagClass="business-experience">
+				<section class="pl-16">
+					<Tag tag="li" tagClass="best-project">
+						<Scr client:idle/>
+					</Tag>
+				</section>
+			</Tag>
+		</section>
 		<section class="flex justify-center">
 			<ComingSoon client:idle/>
 		</section>
 		<section class="flex justify-center p-10">
 			<a class="text-2xl underline" href="https://t.me/s1ma_tg">Телеграмм для связи</a>
+			<div class="group [perspective:1000px] w-80 h-52">
+			</div>
 		</section>
 		
 		<div class="h-[1500px] w-full"></div>

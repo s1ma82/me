@@ -1,0 +1,15 @@
+---
+const {front, back} = Astro.props
+---
+<div class="relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+    <div class="card absolute inset-0 bg-base-200 shadow-xl [backface-visibility:hidden] flex items-center justify-center">
+        <div class="card-body">
+            {front}
+        </div>
+    </div>
+    <div class="card absolute inset-0 bg-primary text-primary-content shadow-xl [transform:rotateY(180deg)] [backface-visibility:hidden] flex items-center justify-center">
+        <div class="card-body">
+            {back}
+        </div>
+    </div>
+</div>
