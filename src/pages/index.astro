@@ -6,7 +6,7 @@ import '../app.css'
 import FullStack from '../components/typed/title'
 import MainBanner from "../components/motion/mainBanner"
 import ComingSoon from '../components/typed/comingSoon'
-import Scr from '../components/portfolio-projects/Scr.tsx'
+import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
 
 ---
 
@@ -54,8 +54,86 @@ import Scr from '../components/portfolio-projects/Scr.tsx'
 			<Tag tag="ul" tagClass="business-experience">
 				<section class="pl-16">
 					<Tag tag="li" tagClass="best-project">
-						<Scr client:idle/>
+						<ProjectCard client:idle
+							imgs={['scr.png']} 
+							height={500}
+							width={800}
+							icons={[['react', 'nextjs', 'sass', 'vite', 'redux', 'ts']]}
+						>
+
+                        <h2 class="text-3xl w-full text-center font-bold font-inter">Сайт для <span class="text-blue">Симферопольского колледжа радиоэлектроники</span>.</h2>
+                        <div class="flex flex-col">
+                        <p class="text-[20px] w-full font-medium">
+                            Отвечал за разработку клиентской части сайта, админку и редактор контента на базе Tiptap. <br/> Система авторизации через JWT.
+                        </p>
+                        <p class="text-[20px] w-full font-medium">
+                            Отдельная благодарность Бэкендеру проекта, за лаконичное API.
+                        </p>
+                        <div class="flex gap-3 [&>img]:rounded-xl h-[144px] py-2">
+                            <img 
+                                class="object-cover h-full cursor-grab transition-[0.3s] duration-300 delay-200 hover:scale-260 "
+                                src="scr1.jpg" alt="" 
+                            />
+                            <img 
+                                class="object-cover h-full cursor-grab transition-[0.3s] duration-300 delay-200 hover:scale-260 "
+                                src="scr2.jpg" alt="" 
+                            />
+                        </div>
+                        <ul
+                            class="flex flex-col list-disc pl-6 text-[20px]"
+                        >
+                            <li>Человек в команде: <span class="text-blue">3</span></li>
+                            <li>Команда: <span class="text-yellow">UI/UX</span>, <span class="text-green">Back+DevOps</span>, <span class="text-blue">Front-end</span></li>
+                            <li>Моя роль: <span class="text-blue">Front-end</span> <span class="text-gray">обновляю проект и по сей день</span></li>
+                        </ul>
+                        </div>
+						</ProjectCard>
 					</Tag>
+
+					<Tag tag="li" tagClass="freelance-project">
+						<ProjectCard client:idle
+							imgs={['baraholka.jpg', 'baraholka2.jpg','baraholka1.jpg']} 
+							height={500}
+							width={1000}
+							icons={[
+								['react', 'zustand', 'sass', 'vite', 'ts'], 
+								['bun', 'elisya', 'grammyjs', 'webpack'],
+								['ubuntu', 'pm2', 'nginx', 'sqlite'],
+							]}
+						>
+
+                        <h2 class="text-3xl w-full text-center font-bold font-inter"><span class="text-green">Интернет каталог.</span></h2>
+                        <div class="flex flex-col">
+                        <p class="text-[20px] w-full font-medium"><pre>
+Сложная задача с ограниченным бюджетом и ресурсами.
+Задача:
+    Создать <span class="text-dark-blue">Mini-app</span> каталог товаров, для местного предпринимателя.
+
+Итог работы: 
+    Был разработан телеграмм-бот и мини-приложение.
+    Бот парсит сообщения из телеграмм канала, в котором постятся карточки товаров, и        
+    загружает их в базу, откуда мини-приложение их отрисовывает. 
+    Так-же через бота происходит управление заказами.
+    От хостинга требовалась максимальная бюджетность, поэтому проект требует минимальное       
+    количество ресурсов.
+</p>
+					</pre/>
+                        <ul
+                            class="flex flex-col list-disc pl-6 text-[20px]"
+                        >
+                            <li>Человек в команде: <span class="text-blue">1</span></li>
+                            <li>Моя роль: 
+							<span class="text-blue">Full-stack</span>, 
+							<span class="text-green">DevOps</span>, 
+							<span class="text-red">UX</span>,
+							<span class="text-yellow">UI</span>, 
+							<span class="text-[#68FFC3]">общение с заказчиком</span>,
+
+							</li>
+                        </ul>
+                        </div>
+						</ProjectCard>
+						</Tag>
 				</section>
 			</Tag>
 		</section>
