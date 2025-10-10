@@ -16,15 +16,15 @@ const colors = [
 ]
 ---
 
-<div class="py-20 w-full h-fit flex justify-center">
+<div class={`py-20 w-full h-fit flex justify-center`}>
     <div class="
-        terminal bg-terminal rounded-[28px] p-4 w-3/4 flex flex-col gap-3 
+        terminal bg-terminal rounded-[28px] p-4 w-full lg:w-3/4 flex flex-col gap-3 
         shadow-[0_0_30px_-5px_var(--color-blue),_inset_0_-5px_7px_#00000070]
         ">
         <div class="topline text-[20px]">
             <span class="text-blue">~</span> <span class="text-green">skillsfetch</span>
         </div>
-        <div class="infoblock flex">
+        <div class="infoblock flex flex-col items-center lg:flex-row ">
             <pre class="text-[5px]">
                 {catTui}
             </pre>
@@ -42,9 +42,11 @@ const colors = [
                     </div>
                 </li>
                 <li>
-                    <ul class="ml-16 flex flex-col w-full text-[20px] [&>li]:flex [&>li]:gap-2 [&>li]:p-2.5  ">
+                    <ul class="ml-16 flex flex-col w-full text-[14px] lg:text-[20px]  [&>li]:flex [&>li]:gap-2 [&>li]:p-2.5  ">
                         <li>
-                            <WindowSidebar /> 
+                            <div class="w-6">
+                                <WindowSidebar/> 
+                            </div>
                             <div class="flex gap-3">
                                 <span class="text-blue">front:</span>
                                 <p>
@@ -53,16 +55,20 @@ const colors = [
                             </div>
                         </li>
                         <li>
+                            <div class="w-6">
                             <HddStack /> 
+                            </div>
                             <div class="flex gap-3">
                                 <span class="text-blue">back:</span>
                                 <p>
-                                    Node.js, Bun, Fastify, Grammy.js, SQLite, MongoDB; Go, echo, Redis.
+                                    Node.js, Bun, Fastify, Grammy.js, SQLite, MongoDB; Go, echo, JWT, Redis.
                                 </p>
                             </div>
                         </li>
                         <li>
+                            <div class="w-6">
                             <Boxes /> 
+                            </div>
                             <div class="flex gap-3">
                                 <span class="text-blue">sys:</span>
                                 <p>
@@ -71,7 +77,9 @@ const colors = [
                             </div>
                         </li>
                         <li>
+                            <div class="w-6">
                             <Star /> 
+                            </div>
                             <div class="flex gap-3">
                                 <span class="text-blue">bonus:</span>
                                 <p>
@@ -81,7 +89,7 @@ const colors = [
                         </li>
                     </ul>
                 </li>
-                <div class="flex gap-9 p-2.5 pt-6 border-t-2 border-white w-full">
+                <div class="flex justify-between lg:gap-9 lg:justify-start   p-2.5 pt-6 border-t-2 border-white w-full">
                     {colors.map(i => (<Circle fill={i}/>))}
                 </div>
             </ul>

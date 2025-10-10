@@ -7,6 +7,7 @@ import MainBanner from "../components/motion/mainBanner"
 import ComingSoon from '../components/typed/comingSoon'
 import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
 import {techIcons} from '../icons'
+import AlterPage from '../components/markdown/alterpage.md'
 import '../app.css'
 
 ---
@@ -14,11 +15,12 @@ import '../app.css'
 <html lang="ru">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<link rel="icon" type="image/svg+xml" href="favicon.png" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
         <meta name="keywords" content={`s1ma82, front-end, s1ma, sima, sima82, full-stack, Симанович Даниил Алексеевич, Симанович, Симанович Даниил, Симанович Данил, Симонович Даниил. `}/>
         <meta property="og:title" content="s1ma82 (Симанович Даниил)" /> 
@@ -29,6 +31,29 @@ import '../app.css'
 		<title>s1ma82</title>
 	</head>
 	<body class="bg-background p-6 overflow-x-hidden">
+		<article class="
+			prose
+			flex
+			gap-0
+			flex-col
+			md:hidden
+			items-center
+			dark:prose-invert
+			mx-auto
+			prose-headings:font-family-title
+			prose-p:text-2xl
+			prose-p:h-fit
+			*:m-0
+			img:m-0
+			prose-code:text-[12px]
+			prose-pre:rounded-3xl
+			prose-pre:w-full
+		" >
+			<h4 class="bg-dark-blue px-2 py-1 rounded-2xl">Открывай страницу на ПК</h4>
+			<!-- <AlterPage/> -->
+			<Terminal />
+		</article>
+		<div class="hidden md:block">
 		<section class="flex justify-between h-[640px] mb-16">
 			
 			<MainBanner client:idle/>
@@ -176,11 +201,11 @@ import '../app.css'
 				</section>
 			</Tag>
 		</section>
-		<section>
-		</section>
 		<section class="flex justify-center">
 			<ComingSoon client:idle/>
 		</section>
+		</div>
+
 		<script src="../scripts/main.ts">			
 		</script>
 		<!-- Yandex.Metrika counter -->

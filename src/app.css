@@ -2,6 +2,7 @@
 @import "tailwindcss";
 @import "./forms.css";
 
+@plugin "@tailwindcss/typography";
 @plugin "daisyui" {
   logs: false;
   themes: light;
