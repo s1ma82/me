@@ -13,8 +13,11 @@ import sqlite from "./sqlite.svg?raw";
 import redux from "./redux.svg?raw";
 import bun from "./bun.svg?raw";
 import ubuntu from "./ubuntu.svg?raw";
+import tg from "./tg.svg?raw";
+import github from "./github.svg?raw";
+import mail from "./mail.svg?raw";
 
 
 export const techIcons = {
-    react, nextjs, sass, vite, zustand, ts, elisya, grammyjs, pm2, nginx, webpack, sqlite, redux, bun, ubuntu
+    react, nextjs, sass, vite, zustand, ts, elisya, grammyjs, pm2, nginx, webpack, sqlite, redux, bun, ubuntu, tg, github, mail
 } as const

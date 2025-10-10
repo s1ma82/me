@@ -27,6 +27,7 @@ export default ({height, width, icons, imgs, children}: Props) => {
                 className={`relative rounded-3xl cursor-pointer group`}
                 onClick={handleClick}
                 initial={false}
+                
                 animate={{
                     rotateY: flipped ? 180 : 0,
                 }}
@@ -42,6 +43,7 @@ export default ({height, width, icons, imgs, children}: Props) => {
             >
                 {/* FRONT SIDE */}
                 <motion.div
+                    
                     className="absolute inset-0 w-full h-full rounded-3xl backface-hidden"
                     style={{
                         transform: "rotateY(0deg)",
@@ -49,8 +51,13 @@ export default ({height, width, icons, imgs, children}: Props) => {
                 >
                     <motion.div
                         className="absolute flex gap-1 inset-0 w-full h-full  rounded-3xl overflow-hidden
-                            shadow-[0_0_30px_-5px_var(--color-blue),_inset_0_-5px_7px_#00000070]"
-                        animate={{ scale: exploded ? 1.03 : 1 }}
+                            shadow-[0_0_30px_-5px_var(--color-blue),_inset_0_-5px_7px_#00000070]
+                            border-2 border-transparent
+                        "
+                        
+                        animate={{
+                            scale: exploded ? 1.03 : 1
+                        }}
                         transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
                         {imgs?.map((src, i) => {

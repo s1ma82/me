@@ -2,14 +2,15 @@
 
 import Tag from '../components/tag/tag.astro'
 import Terminal from '../components/terminal/terminal.astro'
-import '../app.css'
 import FullStack from '../components/typed/title'
 import MainBanner from "../components/motion/mainBanner"
 import ComingSoon from '../components/typed/comingSoon'
 import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
+import {techIcons} from '../icons'
+import '../app.css'
 
 ---
-
+ 
 <html lang="ru">
 	<head>
 		<meta charset="utf-8" />
@@ -40,7 +41,7 @@ import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
 			</Tag>
 			<Tag tag="p" tagClass="about-me">
 				<p class="ml-14 text-[20px] py-2">
-					Человек-оркестр в разработке. Развиваюсь во всём, до чего дотягиваюсь, — люблю разбираться, экспериментировать и находить связи между разными областями. Хочу уметь делать всё сам, но ценю командную работу и обмен идеями. Получаю удовольствие от самого процесса обучения — от технологий и инноваций в IT до истории и культур разных стран.
+					Человек-оркестр в разработке. Развиваюсь во всём, до чего дотягиваюсь, — люблю разбираться, экспериментировать и находить связи между разными областями. Хочу уметь делать всё сам, но ценю командную работу и обмен идеями.Получаю удовольствие от самого процесса обучения — от технологий и инноваций в IT до истории и культур разных стран.
 					</br></br>
 					Профессию выбрал в 14 лет, потому что мечтал познать мир и увидеть его своими глазами. Разработка для меня — способ расти, создавать и, однажды, построить что-то своё.
 				<div class="flex justify-end items-center text-[20px] gap-3">
@@ -142,16 +143,46 @@ import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
 				</section>
 			</Tag>
 		</section>
+		<section>
+			<Tag tag="div" tagClass="feedback">
+				<section class="flex justify-center flex-col gap-9 p-10">
+					<h2 class="text-3xl text-center font-family-title font-semibold"><span class="text-green">Вопросы</span>? <span class="text-yellow">Идеи</span>? <span class="text-blue">Работа</span>?</h2>
+					<div class="flex justify-center gap-9">
+						<a	
+							target="_blank"
+							href="https://t.me/s1ma_tg" 
+							class="text-2xl font-bold flex items-center gap-3 px-3 rounded-3xl
+							shadow-[0_0_30px_-5px_var(--color-blue)] cursor-pointer hover:scale-105 hover:shadow-[0_0_30px_-5px_var(--color-white)] transition-[0.3]">
+							<Fragment set:html={techIcons.tg}/>
+							@s1ma_tg
+						</a>
+						<button 
+							id="mailBtn"
+							onclick="handleClick()"
+							class="text-2xl font-bold flex items-center gap-3 pr-3 rounded-3xl
+							shadow-[0_0_30px_-5px_var(--color-blue)] cursor-pointer hover:scale-105 hover:shadow-[0_0_30px_-5px_var(--color-white)] transition-[0.3]">
+							<Fragment set:html={techIcons.mail}/>
+							s1mahochukvas@vk.com
+						</button>
+						<div 
+						hidden
+						id="toast"
+						class="toast toast-end toast-top">
+							<div class="alert alert-info !bg-blue !text-background font-bold rounded-2xl">
+								<span>Почта скопирована</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</Tag>
+		</section>
+		<section>
+		</section>
 		<section class="flex justify-center">
 			<ComingSoon client:idle/>
 		</section>
-		<section class="flex justify-center p-10">
-			<a class="text-2xl underline" href="https://t.me/s1ma_tg">Телеграмм для связи</a>
-			<div class="group [perspective:1000px] w-80 h-52">
-			</div>
-		</section>
-		
-		<div class="h-[1500px] w-full"></div>
-		<script src="../scripts/main.ts"></script>
+		<script src="../scripts/main.ts">
+			
+		</script>
 	</body>
 </html>
