@@ -21,11 +21,11 @@ export default () => {
       className="fixed h-[640px] right-0 flex flex-col w-1/3 justify-start gap-20 items-center"
       style={{ x: x(500), opacity }}
             >
-                    <img
-                        src="main-logo.png"
-                        alt="Аватар автора"
-                        className="rounded-full w-60 h-60 logo-light"
-                    />
+              <img
+                  src="main-logo.png"
+                  alt="Аватар автора"
+                  className="rounded-full w-60 h-60 logo-light"
+              />
       <h1 className="text-5xl font-family-title font-bold ">
         <span className="opacity-60">@</span>s1ma82
       </h1>
