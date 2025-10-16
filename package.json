@@ -18,6 +18,7 @@
     "aos": "^2.3.4",
     "astro": "^5.14.1",
     "daisyui": "^5.1.27",
+    "github-markdown-css": "^5.8.1",
     "motion": "^12.23.22",
     "tailwindcss": "^4.1.14",
     "typed.js": "^2.1.0"

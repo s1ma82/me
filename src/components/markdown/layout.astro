@@ -1,0 +1,50 @@
+---
+import '../../app.css'
+---
+<html lang="ru">
+  <head>
+  <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="favicon.png" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <meta name="keywords" content={`s1ma82, front-end, s1ma, sima, sima82, full-stack, Симанович Даниил Алексеевич, Симанович, Симанович Даниил, Симанович Данил, Симонович Даниил. `}/>
+        <meta property="og:title" content="TaskLab" /> 
+        <meta property="og:description" content="Task Manager с элементами геймификации для команд" />
+        <meta property="og:image" content="https://me.s1ma82.ru/favicon.png" /> 
+        <meta property="og:type" content="website" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="yandex-verification" content="367354b43480376a" />
+		<title>TaskLab</title>
+  </head>
+  <style>
+  @import url("github-markdown-css/github-markdown-dark.css");
+  .markdown {
+
+  }
+  </style>
+  <body
+    class="bg-background">
+    <div
+    class="
+      prose
+      markdown
+      prose-md
+      block
+      mx-auto
+      gap-0
+      items-center
+      prose-headings:font-family-title
+      prose-h1:text-[2rem]
+      prose-p:text-2xl
+      prose-p:h-fit
+      prose-code:text-[12px]
+      prose-pre:rounded-3xl
+      prose-pre:w-full">
+      <slot />
+    </div>
+  </body>
+</html>
