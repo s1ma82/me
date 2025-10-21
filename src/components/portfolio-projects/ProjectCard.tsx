@@ -63,7 +63,7 @@ export default ({height, width, icons, imgs, children}: Props) => {
                         {imgs?.map((src, i) => {
                             return <img
                                 src={src}
-                                key={i}
+                                key={src+i}
                                 className={`object-fit h-full w-1/${imgs.length}`}
                                 alt="preview"
                             />
@@ -85,7 +85,9 @@ export default ({height, width, icons, imgs, children}: Props) => {
                         <div className="flex flex-col gap-8 justify-center items-center w-full h-full overflow-visible z-20">
                             
                             {icons?.map((iconsList, i) =>
-                                <div className="relative flex justify-center items-center w-full h-[50px] overflow-visible z-20">
+                                <div
+                                    key={"iconsList#"+i}
+                                    className="relative flex justify-center gap-5 items-center w-full h-[48px] overflow-visible z-20">
                                     {iconsList?.map((icon, i) => {
                                         const containerWidth = 800;
                                         const containerHeight = 500;
@@ -100,10 +102,14 @@ export default ({height, width, icons, imgs, children}: Props) => {
                                         return (
                                             <motion.div
                                                 key={i}
-                                                className="w-20 h-16 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+                                                className={`
+                                                    w-12 h-12 drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] 
+                                                    ${!exploded ? "tooltip" : ''}
+                                                `}
+                                                data-tip={icon}
                                                 dangerouslySetInnerHTML={{ __html: techIcons[icon] }}
                                                 animate={{
-                                                    x: exploded ? randomX : (i - 1) * 20,
+                                                    x: exploded ? randomX : 0,
                                                     y: exploded ? randomY : 0,
                                                     rotate: exploded ? randomRotate : 0,
                                                     scale: exploded ? Math.random() * 1.4 + 0.8 : 1,

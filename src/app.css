@@ -1,6 +1,7 @@
 @import '@fontsource/jetbrains-mono';
 @import "tailwindcss";
 @import "./forms.css";
+@import "tailwind-scrollbar-hide/v4";
 
 @plugin "@tailwindcss/typography";
 @plugin "daisyui" {

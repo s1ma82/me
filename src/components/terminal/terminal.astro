@@ -72,7 +72,7 @@ const colors = [
                             <div class="flex gap-3">
                                 <span class="text-blue">sys:</span>
                                 <p>
-                                Linux, MySQL, PostgresQL, Docker, PM2, Nginx.
+                                Linux, MySQL, PostgreSQL, Docker, PM2, Nginx.
                                 </p>
                             </div>
                         </li>
@@ -90,7 +90,7 @@ const colors = [
                     </ul>
                 </li>
                 <div class="flex justify-between lg:gap-9 lg:justify-start   p-2.5 pt-6 border-t-2 border-white w-full">
-                    {colors.map(i => (<Circle fill={i}/>))}
+                    {colors.map((i, key) => (<Circle key={i + key} fill={i}/>))}
                 </div>
             </ul>
         </div>

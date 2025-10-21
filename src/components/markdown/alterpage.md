@@ -23,7 +23,7 @@
                 "SQLite", "MongoDB", "Go", "echo", "Redis"
             ],
             "sys": [
-                "Linux", "MySQL", "PostgresQL", "Docker", "PM2", "Nginx"
+                "Linux", "MySQL", "PostgreSQL", "Docker", "PM2", "Nginx"
             ],
             "bonus": [
                 "Git", "Figma", "GIMP",

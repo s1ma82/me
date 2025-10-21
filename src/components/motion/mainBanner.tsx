@@ -1,8 +1,8 @@
 "use client";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default () => {
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   // Смещение влево по скроллу от 0px до 300px скролла
   const x = (a:number) => useTransform(scrollY, [0, 640], [0, a]); 

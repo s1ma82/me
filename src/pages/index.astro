@@ -6,6 +6,8 @@ import FullStack from '../components/typed/title'
 import MainBanner from "../components/motion/mainBanner"
 import ComingSoon from '../components/typed/comingSoon'
 import ProjectCard from '../components/portfolio-projects/ProjectCard.tsx'
+import Altcha from '../components/chat-ai/Altcha.tsx'
+import ChatAi from '../components/chat-ai/ChatAi.tsx'
 import {techIcons} from '../icons'
 import '../app.css'
 
@@ -153,12 +155,11 @@ import '../app.css'
                         >
                             <li>Человек в команде: <span class="text-blue">1</span></li>
                             <li>Моя роль: 
-							<span class="text-blue">Full-stack</span>, 
-							<span class="text-green">DevOps</span>, 
-							<span class="text-red">UX</span>,
-							<span class="text-yellow">UI</span>, 
-							<span class="text-[#68FFC3]">общение с заказчиком</span>,
-
+								<span class="text-blue">Full-stack</span>, 
+								<span class="text-green">DevOps</span>, 
+								<span class="text-red">UX</span>,
+								<span class="text-yellow">UI</span>, 
+								<span class="text-[#68FFC3]">общение с заказчиком</span>
 							</li>
                         </ul>
                         </div>
@@ -200,14 +201,21 @@ import '../app.css'
 				</section>
 			</Tag>
 		</section>
-		<section class="flex justify-center">
+		<!-- <section class="flex justify-center">
 			<ComingSoon client:idle/>
+		</section> -->
+		<section>
+			<Tag tag="ai-chatik" tagClass="yandexGPT">
+				<div class="flex flex-col gap-0 justify-start my-2 max-w-3xl mx-auto ">
+					<ChatAi client:only/>
+					<Altcha client:only/>
+				</div>
+			</Tag>
 		</section>
 		</div>
 
 		<script src="../scripts/main.ts">			
 		</script>
-		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
 			(function(m,e,t,r,i,k,a){
 				m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -218,7 +226,5 @@ import '../app.css'
 
 			ym(104582907, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
 		</script>
-		<noscript><div><img src="https://mc.yandex.ru/watch/104582907" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-		<!-- /Yandex.Metrika counter -->	
 	</body>
 </html>
